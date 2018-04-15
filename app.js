@@ -30,7 +30,7 @@ function createCard() {
   let cardList = shuffle(cards);
   cardList.forEach(function(card) {
     $(".deck").append('<li><i class="card fa ' + card + '"></i></li>');
-  })
+  });
 }
 
 // Logic to find matching cards
@@ -64,7 +64,7 @@ function findMatch() {
       }
     }
   updateMoves();
-  })
+  });
 }
 
 // Update HTML with number of moves
@@ -105,10 +105,10 @@ function findWinner() {
   // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
         modal.style.display = "none";
-    }
+    };
 
    $("#play-again-btn").on("click", function() {
-       location.reload()
+       location.reload();
    });
 
    clearInterval(timer);
@@ -132,7 +132,7 @@ function removeClasses() {
 function disableClick() {
  openCard.forEach(function (card) {
    card.off("click");
-  })
+  });
 }
 
 // timer (https://stackoverflow.com/questions/6893130/how-to-set-one-minute-counter-in-javascript)
@@ -162,7 +162,7 @@ startTimer();
 // Function to restart the game on icon click
 function restartGame() {
   $("#restart").on("click", function() {
-      location.reload()
+      location.reload();
   });
   }
 
